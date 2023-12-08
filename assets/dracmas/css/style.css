@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --black: #000000;
+  --back-color-default-dark: #151515;
+  --gold: #DBC96C;
+  --text-color-white: #ffffff;
+  --text-color-a-btn: #212121;
+  --cinza-escuro: #212121;
+  --cinza-claro: #D9D9D9;
+  --default: 'Montserrat', sans-serif;
+}
+body{
+  background-color: var(--back-color-default);
+  background-image: url(https://arslibri.com.br/assets/categorias/background-cat.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (min-width: 700px){
+    body{
+    background-image: url(https://arslibri.com.br/assets/geral/background-desktop/background-perfil-desktop-2.webp);
+    }
+}
+
+main#main{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+div.left{
+  width: 60%;
+  height: 100%;
+  padding: 10%;
+
+  row-gap: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--back-color-default-dark);
+}
+div.right{
+  width: 40%;
+  padding: 10%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--cinza-claro);
+}
+#h1{
+  font-size: 27px;
+}
+.text-default{
+  font-family: var(--default);
+  font-size: 17px;
+
+  text-align: center;
+
+  color: var(--text-color-white);
+}
+.text-default.a-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+
+  font-weight: 600;
+
+  color: var(--text-color-a-btn);
+  background-color: var(--gold);
+
+  width: 200px;
+
+  text-decoration: none;
+}
+.text-default.a-btn::after{
+  content: "";
+
+  position: absolute;
+  margin-left: -200px;
+  margin-top: -68px;
+
+  width: 40px;
+  height: 40px;
+  background-color: #151515;
+  transform: rotate(45deg);
+}
