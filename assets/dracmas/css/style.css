@@ -8,57 +8,96 @@
   --black: #000000;
   --back-color-default-dark: #151515;
   --gold: #DBC96C;
+  --gold-gradiente: linear-gradient(90deg, rgba(219,201,108,1) 0%, rgba(255,238,150,1) 50%, rgba(219,201,108,1) 100%);
   --text-color-white: #ffffff;
   --text-color-a-btn: #212121;
   --cinza-escuro: #212121;
   --cinza-claro: #D9D9D9;
   --default: 'Montserrat', sans-serif;
 }
+
 body{
-  background-color: var(--back-color-default);
-  background-image: url(https://arslibri.com.br/assets/categorias/background-cat.webp);
+  background-color: var(--back-color-default-dark);
+  background-image: url(https://arslibri.com.br/assets/geral/background-desktop/background-perfil-desktop-2.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-@media (min-width: 700px){
-    body{
-    background-image: url(https://arslibri.com.br/assets/geral/background-desktop/background-perfil-desktop-2.webp);
-    }
-}
 
-main#main{
+.main{
   width: 100%;
-  height: 100vh;
+  height: auto;
 
+  flex-wrap: wrap-reverse;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
+
 div.left{
   width: 60%;
-  height: 100%;
-  padding: 10%;
-
-  row-gap: 1.5rem;
-
+  height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  background-color: var(--back-color-default-dark);
+  font-family: var(--default);
 }
+
+div.left-up{
+
+  width: 100%;
+  height: 5%;
+
+  padding: 5%;
+
+}
+
+div.left-up a{
+  color: var(--back-color-default-dark);
+  padding: 1%;
+  border-radius: 10px;
+  background-color: var(--gold);
+  text-decoration: none;
+}
+
+div.left-down{
+
+  padding: 10%;
+
+  width: 100%;
+  height: 95%;
+
+  row-gap: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+  /*background-image: url(https://arslibri.com.br/assets/categorias/background-cat.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+  
+}
+
 div.right{
   width: 40%;
+  height: 100vh;
   padding: 10%;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  background-image: url(/images/dark-cement-concrete-texture-use-background.avif);
+  background-size: cover;
 
   background-color: var(--cinza-claro);
 }
@@ -73,6 +112,12 @@ div.right{
 
   color: var(--text-color-white);
 }
+
+.voltar-btn-principal{
+  position: absolute;
+  color: var(--gold);
+}
+
 .text-default.a-btn{
   display: flex;
   align-items: center;
@@ -81,14 +126,26 @@ div.right{
 
   font-weight: 600;
 
-  color: var(--text-color-a-btn);
-  background-color: var(--gold);
-
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  
   width: 200px;
 
   text-decoration: none;
+
+  transition: linear 0.1s;
 }
-.text-default.a-btn::after{
+
+.text-default.a-btn:hover{
+  color: var(--text-color-a-btn);
+  background-color: var(--gold);
+}
+
+#dracma-img{
+  width: 100%;
+}
+
+/*.text-default.a-btn::after{
   content: "";
 
   position: absolute;
@@ -99,4 +156,137 @@ div.right{
   height: 40px;
   background-color: #151515;
   transform: rotate(45deg);
+}*/
+
+.main2{
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--default);
+}
+
+.main2-div-up{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding-block: 2rem;
+}
+
+.main2-div-up h1{
+  color: var(--cinza-claro);
+  font-size: 20pt;
+  text-align: center;
+}
+
+.main2-div-down{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.div-plano{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  width: 230px;
+  height: 75vh;
+  border-radius: 10px;
+  background-color: var(--back-color-default-dark);
+  border: 5px solid var(--cinza-claro);
+  row-gap: 1rem;
+  box-shadow: 0px 5px 10px black;
+}
+
+.div-plano-img{
+  display: flex;
+  border-radius: 10px;
+  width: 75%;
+  background-size: cover;
+}
+
+.div-plano-img img{
+  position: relative;
+  width: 150px;
+}
+
+.div-plano-text{
+  color: var(--cinza-claro);
+  font-size: 12pt;
+  border-radius: 10px;
+  width: 75%;
+}
+
+.div-plano-de-preco{
+  
+}
+
+.div-plano-de-valor p{
+  color: var(--cinza-claro);
+  font-size: 8pt;
+}
+
+.div-plano-preco{
+  color: var(--cinza-claro);
+  font-weight: bold;
+  width: 75%;
+}
+
+.div-plano-btn{
+  color: var(--cinza-claro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 75%;
+}
+
+.div-plano-btn a{
+  color: var(--cinza-claro);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: linear 0.25s;
+}
+
+.div-plano-btn a:hover{
+  color: var(--back-color-default-dark);
+  background-color: var(--cinza-claro);
+}
+
+@media (max-width: 768px){
+
+  body{
+    background-image: url(https://arslibri.com.br/assets/geral/background-desktop/background-perfil-desktop-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  div.left{
+    width: 100%;
+    height: 100vh;
+  }
+
+  div.right{
+    width: 100%;
+    height: 100vh;
+  }
+  #dracma-img{
+    width: 250px;
+  }
 }
